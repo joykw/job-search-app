@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Form, Button, Row, Col } from 'react-bootstrap';
 
-cosnt Search = (props) => {
+const Search = (props) => {
     const [state, setState] = useState({
         description: '',
         location: '',
