@@ -10,7 +10,7 @@ const JobItem = (props) => {
         location,
         title,
         company_logo,
-        idex
+        index
     } = props;
 
     return (

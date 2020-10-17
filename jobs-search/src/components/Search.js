@@ -19,7 +19,8 @@ const Search = (props) => {
 
     const handleSearch = (event) => {
         event.preventDefault();
-        console.log(state);             
+        console.log(state); 
+        props.onSearch(state);            
     };
 
 
