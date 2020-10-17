@@ -33,10 +33,12 @@ const Search = (props) => {
                         type="text"
                         name="description"
                         value={state.description || ''}
-                        placeholder={handleInputChange}
+                        placeholder="Enter search term"
+                        onChange={handleInputChange}
                         />
                     </Form.Group>
                     </Col>
+
                     <Col>
                     <Form.Group controlId="location">
                         <Form.Control
