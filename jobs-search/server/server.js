@@ -14,7 +14,11 @@ app.get('/jobs', async (req, res) => {
         let { description = '', full_time, location = '', page = 1 } = req.query;
         description = description ? encodeURIComponent(description) : '';
         location = location ? encodeURIComponent(location) : '';
-        full_time = full_time === 'true' ? '&full_time=true' : '';
+
+        //If we want to only the full-time jobs then we need 
+        //to add an additional full_time parameter to query string with the value of true
+        full_time = full_time === 'true' ? '&full_time=true' : ''; 
+        
     
     if (page) {
         page = parseInt(page);
