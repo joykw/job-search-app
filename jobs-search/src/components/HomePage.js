@@ -50,7 +50,7 @@ const HomePage = (props) => {
 
   let jobDetails = {};
   if (page === 'details') {
-    jobDetails = results.find((job) => job.id === jobId);
+    jobDetails = results.find((job) => job.id === jobId); //filtering out the job from the results array and passing it to JobDetails component
   }
   return (
     <div>
@@ -79,3 +79,5 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(HomePage);
+
+

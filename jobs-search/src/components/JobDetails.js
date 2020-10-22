@@ -1,4 +1,3 @@
-//to get the details of the job when we click on any of the Jobs
 import React from 'react';
 
 const JobDetails = ({ details, onResetPage }) => {
@@ -27,7 +26,8 @@ const JobDetails = ({ details, onResetPage }) => {
         <div className="left-section">
           <div className="title">{title}</div>
           <hr />
-          <div className="job-description">{description}</div>
+          {/* <div className="job-description">{description}</div> */}
+          <div className="job-description" dangerouslySetInnerHTML={{ __html: description }}></div>
         </div>
         <div className="right-section">
           <div className="company-details">
@@ -40,7 +40,8 @@ const JobDetails = ({ details, onResetPage }) => {
           </div>
           <div className="how-to-apply">
             <h3>How to apply</h3>
-            <div>{how_to_apply}</div>
+            {/* <div>{how_to_apply}</div> */}
+            <div dangerouslySetInnerHTML={{ __html: how_to_apply }}></div>
           </div>
         </div>
       </div>
@@ -49,6 +50,3 @@ const JobDetails = ({ details, onResetPage }) => {
 };
 
 export default JobDetails;
-//Here, we are displaying the description of the job details.
-//Next we need a flag that will decide when to display the details page and when to display the list of jobs. For this we go to HomePage.js
-//and create a new state variable with a default value of 'home' and a variable to track id of the job clicked
