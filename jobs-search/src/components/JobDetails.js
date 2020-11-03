@@ -40,8 +40,9 @@ const JobDetails = ({ details, onResetPage }) => {
           </div>
           <div className="how-to-apply">
             <h3>How to apply</h3>
-            {/* <div>{how_to_apply}</div> */}
-            <div dangerouslySetInnerHTML={{ __html: how_to_apply }}></div>
+            <div>{how_to_apply}</div> 
+
+            {/* <div dangerouslySetInnerHTML={{ __html: how_to_apply }}></div> */}
           </div>
         </div>
       </div>

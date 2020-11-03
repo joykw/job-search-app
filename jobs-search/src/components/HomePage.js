@@ -15,6 +15,7 @@ const HomePage = (props) => {
   const [jobId, setJobId] = useState(-1);
   const [page, setPage] = useState('home');
 
+
   useEffect(() => {
     setResults(props.jobs);
   }, [props.jobs]);
@@ -49,9 +50,12 @@ const HomePage = (props) => {
   };
 
   let jobDetails = {};
-  if (page === 'details') {
-    jobDetails = results.find((job) => job.id === jobId); //filtering out the job from the results array and passing it to JobDetails component
+  if (page === 'details'){
+    jobDetails = results.find((job) => job.id === jobId);
   }
+
+
+
   return (
     <div>
       <div className={`${page === 'details' && 'hide'}`}>
@@ -72,12 +76,9 @@ const HomePage = (props) => {
     </div>
   );
 };
-
 const mapStateToProps = (state) => ({
   jobs: state.jobs,
   errors: state.errors
 });
 
 export default connect(mapStateToProps)(HomePage);
-
-
